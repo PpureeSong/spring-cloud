@@ -10,6 +10,11 @@ spring:
       settings:
         web-allow-others: true  # 외부접속 허용여부
       path: /h2-console
+  datasource: # 자동으로 테이블 생성되도록 설정
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+#    username: sa
+#    password: 1234
 
 eureka:
   instance:
