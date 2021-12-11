@@ -20,6 +20,10 @@ spring:
             preLogger: true
             postLogger: true
       routes:
+        - id: user-service
+          uri: lb://USER-SERVICE  #predicate에 설정한 path로 들어오는 요청을 해당 uri로 포워딩 시켜준다
+          predicates:
+            - Path=/user-service/**
         - id: first-service
           uri: lb://MY-FIRST-SERVICE #이동 될 주소 http://localhost:8081
           predicates:
