@@ -25,9 +25,13 @@ spring:
           predicates:
             - Path=/user-service/**
         - id: catalog-service
-          uri: lb://CATALOG-SERVICE  #predicate에 설정한 path로 들어오는 요청을 해당 uri로 포워딩 시켜준다
+          uri: lb://CATALOG-SERVICE
           predicates:
             - Path=/catalog-service/**
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/order-service/**
         - id: first-service
           uri: lb://MY-FIRST-SERVICE #이동 될 주소 http://localhost:8081
           predicates:
