@@ -8,6 +8,5 @@ spring:
     config:
       server:
         git:
-          uri: file:///Users/haddudda/dev/spring-cloud/git-local-repo
-#        native:
-#          search-locations: file:///Users/haddudda/dev/spring-cloud/git-local-repo
+          uri: https://github.com/PpureeSong/spring-cloud
+#          uri: file:///Users/haddudda/dev/spring-cloud/git-local-repo
